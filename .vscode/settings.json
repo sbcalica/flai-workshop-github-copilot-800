@@ -1,0 +1,10 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/octofit-tracker/backend/venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "python.autoComplete.extraPaths": [
+    "${workspaceFolder}/octofit-tracker/backend"
+  ],
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/octofit-tracker/backend"
+  ]
+}
