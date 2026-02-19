@@ -14,11 +14,9 @@ function Users() {
   const [saveError, setSaveError] = useState(null);
   const [saveSuccess, setSaveSuccess] = useState(false);
 
-  const apiBaseUrl = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api`;
-
   const fetchUsers = async () => {
     try {
-      const apiUrl = `${apiBaseUrl}/users/`;
+      const apiUrl = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users/`;
       console.log('Fetching users from:', apiUrl);
       
       const response = await fetch(apiUrl);
@@ -44,7 +42,7 @@ function Users() {
 
   const fetchTeams = async () => {
     try {
-      const apiUrl = `${apiBaseUrl}/teams/`;
+      const apiUrl = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/teams/`;
       console.log('Fetching teams from:', apiUrl);
       
       const response = await fetch(apiUrl);
@@ -98,7 +96,7 @@ function Users() {
     setSaveSuccess(false);
 
     try {
-      const apiUrl = `${apiBaseUrl}/users/${editingUser.id}/`;
+      const apiUrl = `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users/${editingUser.id}/`;
       console.log('Updating user at:', apiUrl);
       
       const response = await fetch(apiUrl, {
